@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto.View.Login"
+    Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#EBC7C7"
+             >
+    <ContentPage.Content>
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <Image Grid.Row="0" Margin="0,30" Source="cardiogram.png" Aspect="AspectFit" HeightRequest="180" WidthRequest="80"></Image>
+            <Frame Grid.Row="1" Margin="0,0,0,-40" BorderColor="#1758" HasShadow="True"  CornerRadius="50" HeightRequest="700">
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="20" Padding="20,50,20,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Margin="0,30"  Text="FarmaMovil" FontSize="35" FontAttributes="Bold" TextColor="Black" HorizontalOptions="CenterAndExpand"></Label>
+
+                    <Button Grid.Row="2" Text="Elige una foto"  BackgroundColor="#EBC7C7" CornerRadius="20"></Button>
+                    <Button Grid.Row="3" Text="Tomar una foto"  BackgroundColor="#EBC7C7" CornerRadius="20"></Button>
+                    <Button Grid.Row="4" Text="Analizar la foto"  BackgroundColor="#EBC7C7" CornerRadius="20"></Button>
+                    <Label x:Name="Resultado"/>
+                    <ProgressBar x:Name="Precision"/>
+
+
+                </Grid>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
